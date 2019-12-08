@@ -5,8 +5,72 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:wpf_password_manger"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="350" Width="600" Background="Black">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
 
+        <DockPanel Grid.Column="1" LastChildFill="False">
+            <!-- Top Title -->
+            <Label Grid.Column="1" 
+               HorizontalAlignment="Left" 
+               Foreground="White"
+               FontSize="30"
+               FontWeight="Bold">
+                Password Manager
+            </Label>
+            <!-- Top Button -->
+            <Button DockPanel.Dock="Right" Width="100" Height="30" Background="DeepSkyBlue" Foreground="White" FontWeight="Bold">New One</Button>
+            <Button DockPanel.Dock="Right" Width="100" Height="30" Background="DimGray" Foreground="White" FontWeight="Bold" Margin="0 0 10 0">List</Button>
+        </DockPanel>
+        <!-- Formular -->
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="100"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <!-- Service Field -->
+            <Label Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White">Service</Label>
+            <StackPanel Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2">
+                <Label Foreground="White" VerticalAlignment="Top">Lorem ipsum</Label>
+                <TextBox Height="30" Background="White" VerticalAlignment="Center" Padding="0 0 0 10"></TextBox>
+            </StackPanel>
+            <Label Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White">Login</Label>
+            <!-- Login Field -->
+            <StackPanel Grid.Row="1" Grid.Column="1">
+                <Label Foreground="White">Lorem</Label>
+                <TextBox Height="30" Background="White" VerticalAlignment="Center" Padding="0 0 0 10"></TextBox>
+            </StackPanel>
+            
+            <!-- Password Field -->
+            <Label Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White">Password</Label>
+            <StackPanel Grid.Row="2" Grid.Column="1">
+                <Label Foreground="White">Lorem Ipsum</Label>
+                <TextBox Height="30" Background="White" VerticalAlignment="Center" Padding="0 0 0 10"></TextBox>
+            </StackPanel>
+            
+
+            <DockPanel Grid.Row="3" Grid.Column="1" LastChildFill="False">
+                <!-- Bottom Button -->
+                <Button DockPanel.Dock="Left" Width="100" Height="30" Background="OrangeRed" Foreground="White" FontWeight="Bold" Margin="0 0 10 0" UseLayoutRounding="False">Delete</Button>
+                <Button DockPanel.Dock="Right" Width="100" Height="30" Background="Green" Foreground="White" FontWeight="Bold">Save</Button>
+            </DockPanel>
+        </Grid>
+        
     </Grid>
 </Window>
